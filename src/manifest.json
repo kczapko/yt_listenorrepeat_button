@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "YT -> ListenOnRepeat",
+  "description": "YT -> ListenOnRepeat",
+  "version": "0.1",
+
+  "permissions": [
+    "http://www.youtube.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://www.youtube.com/watch*"],
+      "js": [
+        "inject.js",
+        "yt_listenorrepeat_button.js"
+      ],
+      "run_at": "document_end"
+    } 
+  ]
+}
