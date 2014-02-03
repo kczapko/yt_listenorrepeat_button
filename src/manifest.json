@@ -3,14 +3,18 @@
 
   "name": "YT -> ListenOnRepeat",
   "description": "YT -> ListenOnRepeat",
-  "version": "0.1",
+  "version": "0.2",
 
   "permissions": [
-    "http://www.youtube.com/"
+    "http://www.youtube.com/",
+    "https://www.youtube.com/"
   ],
   "content_scripts": [
     {
-      "matches": ["http://www.youtube.com/watch*"],
+      "matches": [
+        "http://www.youtube.com/watch*",
+        "https://www.youtube.com/watch*"
+      ],
       "js": [
         "inject.js",
         "yt_listenorrepeat_button.js"
